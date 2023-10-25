@@ -7,6 +7,7 @@ plugins {
 
 group = 'co.edu.uniquindio'
 version = '1.0-SNAPSHOT'
+description= 'Este sera nuestro proyecto final'
 
 repositories {
     mavenCentral()
