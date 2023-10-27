@@ -3,6 +3,7 @@ package co.edu.uniquindio.clinica.dto.paciente;
 import co.edu.uniquindio.clinica.modelo.enums.Ciudad;
 import co.edu.uniquindio.clinica.modelo.enums.EPS;
 import co.edu.uniquindio.clinica.modelo.enums.TipoSangre;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -26,7 +27,11 @@ public record RegistroPacienteDTO(
        @NotBlank String alergias,
         @NotNull EPS eps,
         @NotNull  TipoSangre tipoSangre,
-        @NotNull @Length(max = 80)String correo,
+        @NotNull @Length(max = 80)@NotBlank
+        @Length(max = 80, message = "El correo debe tener máximo 80 caracteres")
+        @Email(message = "Ingrese una dirección de correo electrónico válida")
+
+        String correo,
        @NotBlank String password
 
 
