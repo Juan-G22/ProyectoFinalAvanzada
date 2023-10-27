@@ -8,5 +8,9 @@ import java.util.List;
 
 @Repository
 public interface CitaRepo extends JpaRepository<Cita,Integer> {
+
+    Cita findByCodigo(int codigo);
+    List<Cita> findByMedicoCodigo(int codigoMedico);
+    List<Cita> findByPacienteCodigo(int codigoPaciente);
     List<Cita> findAllByPacienteCodigo(int codigoPaciente);
 }
