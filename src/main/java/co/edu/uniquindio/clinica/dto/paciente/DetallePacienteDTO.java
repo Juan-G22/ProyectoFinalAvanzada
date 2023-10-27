@@ -9,9 +9,11 @@ import java.time.LocalDateTime;
 
 public record DetallePacienteDTO(
 
+        int codigo,
         String cedula,
         String nombre,
         String telefono,
+        String urlFoto,
         Ciudad ciudad,
         LocalDate fechaNacimiento,
         String alergias,
