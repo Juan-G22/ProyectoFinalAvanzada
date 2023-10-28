@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MedicoRepo extends JpaRepository<Medico,Integer> {
 
-    Medico findByCorreo(String correo);
+    Medico findByEmail(String correo);
 
     Medico findByCedula(String cedula);
 }

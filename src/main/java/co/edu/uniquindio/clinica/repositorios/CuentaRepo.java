@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface CuentaRepo extends JpaRepository<Cuenta,Integer> {
 
     @NotNull
-    Cuenta findByCorreo(String correo);
+    Cuenta findByEmail(String correo);
 }

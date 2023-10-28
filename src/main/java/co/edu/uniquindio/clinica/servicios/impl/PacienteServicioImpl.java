@@ -35,13 +35,13 @@ public class PacienteServicioImpl implements PacienteServicio {
     @Override
     public int registrarse(RegistroPacienteDTO registroPacienteDTO) throws Exception {
 
-        if( estaRepetidaCedula(registroPacienteDTO.cedula()) ){
-            throw new Exception("La cédula ya se encuentra registrada");
-        }
+    //    if( estaRepetidaCedula(registroPacienteDTO.cedula()) ){
+    //        throw new Exception("La cédula ya se encuentra registrada");
+    //    }
 
-        if( estaRepetidoCorreo(registroPacienteDTO.correo()) ){
-            throw new Exception("El correo ya se encuentra registrado");
-        }
+    //    if( estaRepetidoCorreo(registroPacienteDTO.correo()) ){
+        //throw new Exception("El correo ya se encuentra registrado");
+      //  }
 
         Paciente paciente = new Paciente();
         paciente.setCedula(registroPacienteDTO.cedula());
@@ -65,7 +65,7 @@ public class PacienteServicioImpl implements PacienteServicio {
     }
 
     private boolean estaRepetidoCorreo(String correo) {
-        return pacienteRepo.findByCorreo(correo) != null;
+        return pacienteRepo.findByEmail(correo) != null;
     }
 
     private boolean estaRepetidaCedula(String cedula) {
