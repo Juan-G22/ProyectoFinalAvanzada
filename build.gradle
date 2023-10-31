@@ -7,7 +7,7 @@ plugins {
 
 group = 'co.edu.uniquindio'
 version = '1.0-SNAPSHOT'
-description= 'Este sera nuestro proyecto final'
+description= 'Este sera nuestro proyecto final de avanzada'
 
 repositories {
     mavenCentral()
@@ -28,6 +28,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.mysql:mysql-connector-j'
+
+    implementation 'org.springframework.security:spring-security-crypto:6.1.4'
 }
 
 test {

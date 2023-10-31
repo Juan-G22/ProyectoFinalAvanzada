@@ -12,7 +12,7 @@ public interface PacienteServicio {
 
     int editarPerfil(DetallePacienteDTO PacienteDTO) throws Exception;
 
-    void eliminarCuenta(int codigoPaciente) throws Exception;
+    boolean eliminarCuenta(int codigoPaciente) throws Exception;
 
     DetallePacienteDTO verDetallePaciente(int codigo) throws Exception;
 

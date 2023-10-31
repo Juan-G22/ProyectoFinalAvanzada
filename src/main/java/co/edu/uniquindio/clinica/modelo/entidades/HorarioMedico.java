@@ -22,7 +22,7 @@ public class HorarioMedico implements Serializable {
     private int codigo;
 
     @Column(nullable = false)
-    private LocalDate dia;
+    private LocalDateTime dia;
 
     @Column(nullable = false)
     private LocalDateTime horaInicio;

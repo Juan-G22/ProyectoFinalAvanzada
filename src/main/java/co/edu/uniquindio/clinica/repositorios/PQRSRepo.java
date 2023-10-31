@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface PQRSRepo extends JpaRepository<PQRS,Integer> {
     List<PQRS> findAllByCitaPacienteCodigo(int codigoPaciente);
+
 }

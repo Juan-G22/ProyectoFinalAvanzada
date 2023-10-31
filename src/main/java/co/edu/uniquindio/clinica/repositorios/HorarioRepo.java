@@ -10,4 +10,6 @@ import java.util.List;
 public interface HorarioRepo extends JpaRepository<HorarioMedico,Integer> {
 
     List<HorarioMedico> findAllByMedicoCodigo(int codigo);
+
+
 }
