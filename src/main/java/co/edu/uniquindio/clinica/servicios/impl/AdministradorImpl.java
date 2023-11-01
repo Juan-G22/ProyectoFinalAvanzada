@@ -113,7 +113,7 @@ public class AdministradorImpl implements AdministradorServicio {
     }
 
     @Override
-    public void eliminarMedico(int codigo) throws Exception {
+    public boolean eliminarMedico(int codigo) throws Exception {
 
         Optional<Medico> opcional =medicoRepo.findById(codigo);
 
@@ -125,6 +125,7 @@ public class AdministradorImpl implements AdministradorServicio {
         buscado.setEstado(EstadoUsuario.INACTIVO);
         medicoRepo.save( buscado );
 
+        return true;
     }
 
     @Override

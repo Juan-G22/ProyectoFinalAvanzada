@@ -107,7 +107,7 @@ public class PacienteServicioImpl implements PacienteServicio {
         } else {
             Paciente obtenido = pacienteBuscado.get();
             obtenido.setEstado(EstadoUsuario.INACTIVO);
-            this.pacienteRepo.save(obtenido);
+            pacienteRepo.save(obtenido);
 
         }
 

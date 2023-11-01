@@ -108,6 +108,45 @@ public class AdministradorServicioTest {
         Assertions.assertEquals(5, medicos.size());
     }
 
+    @Test
+    @Sql("classpath:dataset.sql")
+    public void eliminarMedicoTest() throws Exception {
+
+        boolean respuesta = this.administradorServicio.eliminarMedico(8);
+        Assertions.assertTrue(respuesta);
+    }
+
+    @Test
+    @Sql("classpath:dataset.sql")
+    public void verDetallePQRSTest() throws Exception{
+        DetallePQRSDTO detallePQRSDTO = administradorServicio.verDetallePQRS(5);
+        System.out.println(detallePQRSDTO.toString());
+    }
+
+    @Test
+    @Sql("classpath:dataset.sql")
+    public  void responderPQRSTest() throws Exception {
+        RegistroRespuestaDTO registroRespuestaDTO = new RegistroRespuestaDTO(
+                12,
+                4,
+                "respuesta del administrador"
+        );
+        administradorServicio.responderPQRS(registroRespuestaDTO);
+    }
+
+    @Test
+    @Sql("classpath:dataset.sql")
+    public void cambiarEstadoPQRSTest() throws Exception{
+        administradorServicio.cambiarEstadoPQRS(2, EstadoPQRS.ARCHIVADO);
+    }
+
+    @Test
+    @Sql("classpath:dataset.sql")
+    public void listarCitasTest() throws Exception{
+        List<ItemCitaAdminDTO> listarCitas = administradorServicio.listarCitas();
+        Assertions.assertEquals(5, listarCitas.size());
+    }
+
 
 
 
