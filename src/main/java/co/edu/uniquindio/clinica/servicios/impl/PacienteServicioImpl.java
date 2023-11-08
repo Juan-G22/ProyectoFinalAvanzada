@@ -274,7 +274,7 @@ public class PacienteServicioImpl implements PacienteServicio {
     @Override
     public List<ItemCitaAdminDTO> listarCitasPaciente(int codigoPaciente) throws Exception {
 
-        List<Cita> listaCitas = this.citaRepo.findAllByPacienteCodigo(codigoPaciente);
+        List<Cita> listaCitas = this.citaRepo.findByPacienteCodigo(codigoPaciente);
         List<ItemCitaAdminDTO> respuesta = new ArrayList();
         Iterator var4 = listaCitas.iterator();
 

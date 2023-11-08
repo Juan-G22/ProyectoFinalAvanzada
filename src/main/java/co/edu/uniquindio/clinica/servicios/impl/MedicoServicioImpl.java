@@ -7,6 +7,7 @@ import co.edu.uniquindio.clinica.dto.medico.RegistroAtencionDTO;
 import co.edu.uniquindio.clinica.modelo.entidades.Atencion;
 import co.edu.uniquindio.clinica.modelo.entidades.Cita;
 import co.edu.uniquindio.clinica.modelo.entidades.Medico;
+import co.edu.uniquindio.clinica.modelo.enums.EstadoCita;
 import co.edu.uniquindio.clinica.repositorios.AtencionRepo;
 import co.edu.uniquindio.clinica.repositorios.CitaRepo;
 import co.edu.uniquindio.clinica.repositorios.MedicoRepo;
@@ -62,23 +63,22 @@ public class MedicoServicioImpl implements MedicoServicio {
 // Registar notas medicas,tratamiento ,asignacion especialista al hacer una consulta
     public int atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception {
 
-        Optional<Atencion> atenciones = atencionRepo.findById(registroAtencionDTO.codigoCita());
+        Optional<Cita> citas = citaRepo.findById(registroAtencionDTO.codigoCita());
 
 
-        if (atenciones.isEmpty()) {
+        if (citas.isEmpty()) {
             throw new Exception("No existen una cita con el codigo" + registroAtencionDTO.codigoCita());
         }
-
-        Atencion atencion = atenciones.get();
-
+         Cita cita = citas.get();
+        Atencion atencion =new Atencion();
         atencion.setNotasMedicas(registroAtencionDTO.notasMedicas());
         atencion.setTratamiento(registroAtencionDTO.tratamiento());
         atencion.setDiagnostico(registroAtencionDTO.diagnostico());
         atencion.setAsignacionEspecialista(registroAtencionDTO.asignaciónEspecialista());
-
+        cita.setEstadoCita(EstadoCita.COMPLETADA);
 
         atencionRepo.save(atencion);
-
+citaRepo.save(cita);
         return atencion.getCodigo();
 
 
