@@ -36,7 +36,7 @@ public class PacienteServicioTest {
 
 
     @Test
-    public void registrarPacienteTest()throws Exception{
+        public void registrarPacienteTest()throws Exception{
 
         RegistroPacienteDTO pacienteDTO = new RegistroPacienteDTO("1004917855", "Juan Sebastian Murcia", "3005073525", "aqui va la direccion url de la foto", Ciudad.PEREIRA, LocalDate.of(2000,6,21), "Alergia a los lacteos", EPS.CAFESALUD, TipoSangre.A_POSITIVO, "JuanMurcia@gmail.com", "1234");
         int nuevo = this.pacienteServicio.registrarse(pacienteDTO);

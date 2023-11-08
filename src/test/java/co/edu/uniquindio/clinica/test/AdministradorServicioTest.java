@@ -33,7 +33,7 @@ public class AdministradorServicioTest {
     @Autowired
     private AdministradorServicio administradorServicio;
     @Test
-    @Sql("classpath:dataset.sql" )
+
     public void crearMedicoTest() throws Exception{
 
         HorarioDTO horarioDTO1 = new HorarioDTO(
@@ -64,7 +64,7 @@ public class AdministradorServicioTest {
         );
         int nuevo = administradorServicio.crearMedico(registroMedicoDTO);
 
-        Assertions.assertNotEquals(0,nuevo);
+        Assertions.assertNotEquals(1,nuevo);
     }
 
     @Test
