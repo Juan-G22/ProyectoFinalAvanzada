@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/MedicoServicioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/modelo/entidades/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/AtencionRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/AtencionRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/CitaRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/CitaRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/MedicoServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/MedicoServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/PacienteServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/PacienteServicioImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/AdministradorServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/AdministradorServicioTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +20,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand />
@@ -257,7 +252,7 @@
       <workItem from="1699059874605" duration="4701000" />
       <workItem from="1699149131298" duration="596000" />
       <workItem from="1699374064826" duration="597000" />
-      <workItem from="1699470702319" duration="2189000" />
+      <workItem from="1699470702319" duration="3911000" />
     </task>
     <servers />
   </component>
