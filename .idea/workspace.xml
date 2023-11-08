@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/PacienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+>>>>>>> f878887e0d7ab8e9aa89178567baa4170e909467
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,12 +253,18 @@
       <workItem from="1698726730164" duration="7299000" />
       <workItem from="1698875671127" duration="1430000" />
       <workItem from="1698880909849" duration="1429000" />
+<<<<<<< HEAD
       <workItem from="1698988483008" duration="1851000" />
       <workItem from="1699044084983" duration="5263000" />
       <workItem from="1699059874605" duration="4701000" />
       <workItem from="1699149131298" duration="596000" />
       <workItem from="1699374064826" duration="597000" />
       <workItem from="1699470702319" duration="3911000" />
+=======
+      <workItem from="1698988483008" duration="2219000" />
+      <workItem from="1699041700798" duration="1315000" />
+      <workItem from="1699060178203" duration="3271000" />
+>>>>>>> f878887e0d7ab8e9aa89178567baa4170e909467
     </task>
     <servers />
   </component>
