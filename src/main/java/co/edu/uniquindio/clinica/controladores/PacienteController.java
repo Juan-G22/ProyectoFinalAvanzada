@@ -19,14 +19,7 @@ public class PacienteController {
 
     private final PacienteServicio pacienteServicio;
 
-    @PostMapping("/registrarse")
-    public ResponseEntity<MensajeDTO<String>> registrarse(@Valid @RequestBody RegistroPacienteDTO registroPacienteDTO)throws Exception{
-        pacienteServicio.registrarse(registroPacienteDTO);
-
-        return ResponseEntity.ok().body( new MensajeDTO<>(false, "Paciente registrado correctamente") );
-  }
-
-    @PutMapping("/editar-perfil")
+       @PutMapping("/editar-perfil")
     public ResponseEntity<MensajeDTO<String>> editarPerfil(@Valid @RequestBody DetallePacienteDTO pacienteDTO) throws Exception{
         pacienteServicio.editarPerfil(pacienteDTO);
       return ResponseEntity.ok().body( new MensajeDTO<>(false, "Paciente actualizado correctamete") );
