@@ -15,16 +15,18 @@ import java.util.List;
 @RestControllerAdvice
 public class ExcepcionesGlobales {
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<MensajeDTO<String>> generalException(Exception e){
-        return ResponseEntity.internalServerError().body( new MensajeDTO<>(true, e.getMessage())
+    public ResponseEntity<MensajeDTO<String>> generalException(Exception e) {
+        return ResponseEntity.internalServerError().body(new MensajeDTO<>(true, e.getMessage())
         );
     }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<MensajeDTO> validationException(MethodArgumentNotValidException ex){
+    public ResponseEntity<MensajeDTO> validationException(MethodArgumentNotValidException ex) {
         List<ValidacionDTO> errores = new ArrayList<>();
         BindingResult results = ex.getBindingResult();
-        for (FieldError e: results.getFieldErrors()) {
-            errores.add( new ValidacionDTO(e.getField(), e.getDefaultMessage()) );
+        for (FieldError e : results.getFieldErrors()) {
+            errores.add(new ValidacionDTO(e.getField(), e.getDefaultMessage()));
         }
-        return ResponseEntity.badRequest().body( new MensajeDTO<>(true, errores) );
+        return ResponseEntity.badRequest().body(new MensajeDTO<>(true, errores));
     }
+}
