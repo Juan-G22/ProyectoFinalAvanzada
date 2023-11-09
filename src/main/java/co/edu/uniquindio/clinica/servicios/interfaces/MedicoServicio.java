@@ -12,7 +12,7 @@ public interface MedicoServicio {
 
     List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico) throws Exception;
 
-    int atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception;
+    void atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception;
 
     List<ItemCitaAdminDTO> listarHistorialAtencionesPaciente(int codigoPaciente) throws Exception;
 

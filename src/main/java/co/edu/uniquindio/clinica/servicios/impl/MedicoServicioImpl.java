@@ -19,9 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-
-@Service
 @RequiredArgsConstructor
+@Service
 public class MedicoServicioImpl implements MedicoServicio {
 
     private final MedicoRepo medicoRepo;
@@ -61,15 +60,15 @@ public class MedicoServicioImpl implements MedicoServicio {
 
     @Override
 // Registar notas medicas,tratamiento ,asignacion especialista al hacer una consulta
-    public int atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception {
+    public void atenderCita(RegistroAtencionDTO registroAtencionDTO) throws Exception {
 
         Optional<Cita> citas = citaRepo.findById(registroAtencionDTO.codigoCita());
 
 
         if (citas.isEmpty()) {
-            throw new Exception("No existen una cita con el codigo" + registroAtencionDTO.codigoCita());
+            throw new Exception("No existe una cita con el codigo" + registroAtencionDTO.codigoCita());
         }
-         Cita cita = citas.get();
+        Cita cita = citas.get();
         Atencion atencion =new Atencion();
         atencion.setNotasMedicas(registroAtencionDTO.notasMedicas());
         atencion.setTratamiento(registroAtencionDTO.tratamiento());
@@ -78,8 +77,8 @@ public class MedicoServicioImpl implements MedicoServicio {
         cita.setEstadoCita(EstadoCita.COMPLETADA);
 
         atencionRepo.save(atencion);
-citaRepo.save(cita);
-        return atencion.getCodigo();
+        citaRepo.save(cita);
+
 
 
     }
