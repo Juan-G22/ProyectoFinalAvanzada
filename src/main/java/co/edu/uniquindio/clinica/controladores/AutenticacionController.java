@@ -20,7 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AutenticacionController {
 
+
     private final PacienteServicio pacienteServicio;
+        private final AutenticacionServicio autenticacionServicio;
+
+        @PostMapping("/login")
+        public ResponseEntity<MensajeDTO<TokenDTO>> login(@Valid @RequestBody LoginDTO loginDTO)
+                throws Exception {
+            TokenDTO tokenDTO = autenticacionServicio.login(loginDTO);
+            return ResponseEntity.ok().body(new MensajeDTO<>(false, tokenDTO));
+        }
+
 
     @PostMapping("/registrarse")
     public ResponseEntity<MensajeDTO<String>> registrarse(@Valid @RequestBody RegistroPacienteDTO registroPacienteDTO)throws Exception{

@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/utils/FiltroToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/utils/FiltroToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/AutenticacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/AutenticacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/ValidacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/ValidacionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MedicoServicioTest">
+  <component name="RunManager" selected="Spring Boot.ProyectoApplication (1)">
     <configuration name="AdministradorServicioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -255,7 +258,10 @@
       <workItem from="1699374064826" duration="597000" />
       <workItem from="1699470702319" duration="11222000" />
       <workItem from="1699485155526" duration="5941000" />
-      <workItem from="1699547674560" duration="9271000" />
+      <workItem from="1699547674560" duration="12315000" />
+      <workItem from="1699573998146" duration="624000" />
+      <workItem from="1699665453127" duration="3782000" />
+      <workItem from="1699675089402" duration="1361000" />
     </task>
     <servers />
   </component>
