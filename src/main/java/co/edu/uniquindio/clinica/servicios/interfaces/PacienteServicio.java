@@ -12,7 +12,7 @@ public interface PacienteServicio {
 
     int editarPerfil(DetallePacienteDTO PacienteDTO) throws Exception;
 
-    boolean eliminarCuenta(int codigoPaciente) throws Exception;
+    void eliminarCuenta(int codigoPaciente) throws Exception;
 
     DetallePacienteDTO verDetallePaciente(int codigo) throws Exception;
 
@@ -36,7 +36,7 @@ public interface PacienteServicio {
 
     List<ItemCitaAdminDTO> listarCitasPaciente(int codigoPaciente) throws Exception;
 
-    void filtrarCitas(FiltroBusquedaDTO filtroBusquedaDTO) throws Exception;
+    List<ItemCitaAdminDTO> filtrarCitas(FiltroBusquedaDTO filtroBusquedaDTO) throws Exception;
 
     DetalleAtencionMedicaDTO verDetalleCita(int codigoCita) throws Exception;
 }

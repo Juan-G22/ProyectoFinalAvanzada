@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="" />
+=======
+    <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/AutenticacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/AutenticacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/ValidacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/ValidacionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+>>>>>>> 50c1daca3f6e6ad4e14b02aca5e30a4a883b3934
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +44,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -91,7 +101,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.MedicoServicioTest">
+  <component name="RunManager" selected="Spring Boot.ProyectoApplication (1)">
     <configuration name="AdministradorServicioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -255,12 +265,21 @@
       <workItem from="1699059874605" duration="4701000" />
       <workItem from="1699149131298" duration="596000" />
       <workItem from="1699374064826" duration="597000" />
+<<<<<<< HEAD
       <workItem from="1699470702319" duration="3911000" />
       <workItem from="1698988483008" duration="2219000" />
       <workItem from="1699041700798" duration="1315000" />
       <workItem from="1699060178203" duration="3271000" />
       <workItem from="1699472196568" duration="288000" />
       <workItem from="1700019046540" duration="994000" />
+=======
+      <workItem from="1699470702319" duration="11222000" />
+      <workItem from="1699485155526" duration="5941000" />
+      <workItem from="1699547674560" duration="12315000" />
+      <workItem from="1699573998146" duration="624000" />
+      <workItem from="1699665453127" duration="3782000" />
+      <workItem from="1699675089402" duration="1361000" />
+>>>>>>> 50c1daca3f6e6ad4e14b02aca5e30a4a883b3934
     </task>
     <servers />
   </component>

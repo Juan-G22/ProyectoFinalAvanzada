@@ -22,7 +22,6 @@ public record RegistroPacienteDTO(
         @NotNull Ciudad ciudad,
 
         @NotNull
-        @Future(message = "Seleccione una fecha de nacimiento correcta")
         LocalDate fechaNacimiento,
        @NotBlank String alergias,
         @NotNull EPS eps,

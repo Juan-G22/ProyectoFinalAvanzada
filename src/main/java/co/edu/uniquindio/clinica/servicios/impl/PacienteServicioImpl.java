@@ -99,7 +99,7 @@ public class PacienteServicioImpl implements PacienteServicio {
     }
 
     @Override
-    public boolean eliminarCuenta(int codigoPaciente) throws Exception {
+    public void eliminarCuenta(int codigoPaciente) throws Exception {
 
         Optional<Paciente> pacienteBuscado = this.pacienteRepo.findById(codigoPaciente);
         if (pacienteBuscado.isEmpty()) {
@@ -111,7 +111,7 @@ public class PacienteServicioImpl implements PacienteServicio {
 
         }
 
-        return true;
+
     }
 
     @Override
@@ -127,15 +127,6 @@ public class PacienteServicioImpl implements PacienteServicio {
         }
     }
 
-    @Override
-    public void enviarLinkRecuperacion(String email) throws Exception {
-
-    }
-
-    @Override
-    public void cambiarPassword(NuevaPasswordDTO nuevaPasswordDTO) throws Exception {
-
-    }
 
     @Override
     public int agendarCita(RegistroCitaDTO registroCitaDTO) throws Exception {
@@ -173,10 +164,6 @@ public class PacienteServicioImpl implements PacienteServicio {
 
     }
 
-    @Override
-    public void asignarCitaEspecialista(RegistroCitaDTO registroCitaDTO) throws Exception {
-
-    }
 
     @Override
     public int crearPQRS(RegistroPQRSDTO registroPQRSDTO) throws Exception {
@@ -286,10 +273,7 @@ public class PacienteServicioImpl implements PacienteServicio {
         return respuesta;
     }
 
-    @Override
-    public void filtrarCitas(FiltroBusquedaDTO filtroBusquedaDTO) throws Exception {
 
-    }
 
     @Override
     public DetalleAtencionMedicaDTO verDetalleCita(int codigoCita) throws Exception {
@@ -302,4 +286,23 @@ public class PacienteServicioImpl implements PacienteServicio {
             return new DetalleAtencionMedicaDTO(cita.getCodigo(), cita.getPaciente().getNombre(), cita.getMedico().getNombre(), cita.getMedico().getEspecialidad(), cita.getFechaCita(), cita.getAtencion().getTratamiento(), cita.getAtencion().getNotasMedicas(), cita.getAtencion().getDiagnostico());
         }
     }
+
+    @Override
+    public void enviarLinkRecuperacion(String email) throws Exception {
+
+    }
+
+    @Override
+    public void cambiarPassword(NuevaPasswordDTO nuevaPasswordDTO) throws Exception {
+
+    }
+    @Override
+    public void asignarCitaEspecialista(RegistroCitaDTO registroCitaDTO) throws Exception {
+
+    }
+    @Override
+    public List<ItemCitaAdminDTO> filtrarCitas(FiltroBusquedaDTO filtroBusquedaDTO) throws Exception {
+        return null;
+    }
+
 }
