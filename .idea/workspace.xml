@@ -7,6 +7,7 @@
     <list default="true" id="4bcdd1a3-171c-47b9-aa22-39f240c1fb78" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/controladores/PacienteController.java" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/DetallePacienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/DetallePacienteDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/dto/paciente/RegistroPacienteDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/PacienteRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/PacienteRepo.java" afterDir="false" />
@@ -17,6 +18,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/utils/JWTUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/utils/JWTUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/PacienteRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/repositorios/PacienteRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/PacienteServicioImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/impl/PacienteServicioImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/interfaces/PacienteServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/edu/uniquindio/clinica/servicios/interfaces/PacienteServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/edu/uniquindio/clinica/test/PacienteServicioTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/dataset.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/dataset.sql" afterDir="false" />
+>>>>>>> a1fbc5df0bf041db5bb0b10581effb04e2914c06
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +135,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="MedicoServicioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -150,6 +159,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="MedicoServicioTest.listarCitasPendientes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -173,6 +183,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="MedicoServicioTest.listarCitasPendientesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -196,6 +207,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="PacienteServicioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -219,6 +231,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="ProyectoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -264,6 +277,12 @@
       <workItem from="1699059874605" duration="4701000" />
       <workItem from="1699149131298" duration="596000" />
       <workItem from="1699374064826" duration="597000" />
+      <workItem from="1699470702319" duration="3911000" />
+      <workItem from="1698988483008" duration="2219000" />
+      <workItem from="1699041700798" duration="1315000" />
+      <workItem from="1699060178203" duration="3271000" />
+      <workItem from="1699472196568" duration="288000" />
+      <workItem from="1700019046540" duration="994000" />
       <workItem from="1699470702319" duration="11222000" />
       <workItem from="1699485155526" duration="5941000" />
       <workItem from="1699547674560" duration="12315000" />

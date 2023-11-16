@@ -80,7 +80,11 @@ public class PacienteServicioImpl implements PacienteServicio {
 
         Optional<Paciente> pacienteBuscado = Optional.ofNullable(this.pacienteRepo.findByCedula(PacienteDTO.cedula()));
         if (pacienteBuscado.isEmpty()) {
+<<<<<<< HEAD
             throw new Exception("No existe un paciente con la cedula:/ " + PacienteDTO.cedula());
+=======
+            throw new Exception("No existe un paciente con la cedula " + PacienteDTO.cedula());
+>>>>>>> a1fbc5df0bf041db5bb0b10581effb04e2914c06
         } else {
             Paciente pacienteActualizado = pacienteBuscado.get();
             pacienteActualizado.setCedula(PacienteDTO.cedula());
@@ -102,9 +106,16 @@ public class PacienteServicioImpl implements PacienteServicio {
     @Override
     public boolean eliminarCuenta(String cedulaPaciente) throws Exception {
 
+<<<<<<< HEAD
         Optional<Paciente> pacienteBuscado = Optional.ofNullable(this.pacienteRepo.findByCedula(cedulaPaciente));
         if (pacienteBuscado.isEmpty()) {
             throw new Exception("No existe un paciente con la cedula " +cedulaPaciente);
+=======
+
+        Optional<Paciente> pacienteBuscado = Optional.ofNullable(this.pacienteRepo.findByCedula(cedulaPaciente));
+        if (pacienteBuscado.isEmpty()) {
+            throw new Exception("No existe un paciente con la cedula " + cedulaPaciente);
+>>>>>>> a1fbc5df0bf041db5bb0b10581effb04e2914c06
         } else {
             Paciente obtenido = pacienteBuscado.get();
             obtenido.setEstado(EstadoUsuario.INACTIVO);
@@ -112,6 +123,7 @@ public class PacienteServicioImpl implements PacienteServicio {
 
         }
 
+        return true;
 
         return true;
     }
