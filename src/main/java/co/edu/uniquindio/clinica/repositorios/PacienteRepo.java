@@ -9,5 +9,6 @@ public interface PacienteRepo extends JpaRepository<Paciente,Integer> {
 
     Paciente findByCedula(String cedula);
 
+
     Paciente findByEmail(String email);
 }

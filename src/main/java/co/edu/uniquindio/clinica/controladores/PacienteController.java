@@ -25,9 +25,9 @@ public class PacienteController {
       return ResponseEntity.ok().body( new MensajeDTO<>(false, "Paciente actualizado correctamete") );
   }
 
-    @DeleteMapping("/eliminar-cuenta/{codigo}")
-    public ResponseEntity<MensajeDTO<String>> eliminarCuenta(@PathVariable int codigo) throws Exception{
-        pacienteServicio.eliminarCuenta(codigo);
+    @DeleteMapping("/eliminar-cuenta/{cedulaPaciente}")
+    public ResponseEntity<MensajeDTO<String>> eliminarCuenta(@PathVariable String cedulaPaciente) throws Exception{
+        pacienteServicio.eliminarCuenta(cedulaPaciente);
         return ResponseEntity.ok().body( new MensajeDTO<>(false, "Paciente eliminado correctamete") );
   }
 

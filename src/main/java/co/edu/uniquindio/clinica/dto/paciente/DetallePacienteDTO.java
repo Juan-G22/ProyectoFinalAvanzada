@@ -5,11 +5,10 @@ import co.edu.uniquindio.clinica.modelo.enums.EPS;
 import co.edu.uniquindio.clinica.modelo.enums.TipoSangre;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public record DetallePacienteDTO(
 
-        int codigo,
+int codigo,
         String cedula,
         String nombre,
         String telefono,

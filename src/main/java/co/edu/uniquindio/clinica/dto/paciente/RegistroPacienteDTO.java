@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 
 public record RegistroPacienteDTO(
 
+
         @NotBlank @Length(max = 10)String cedula,
         @NotBlank @Length(max = 200) String nombre,
         @NotBlank @Length(max = 20) String telefono,
-        @NotBlank
-        String urlFoto,
+        @NotBlank         String urlFoto,
         @NotNull Ciudad ciudad,
 
         @NotNull

@@ -3,10 +3,8 @@ package co.edu.uniquindio.clinica.servicios.interfaces;
 import co.edu.uniquindio.clinica.dto.DetallePQRSDTO;
 import co.edu.uniquindio.clinica.dto.ItemPQRSDTO;
 import co.edu.uniquindio.clinica.dto.RegistroRespuestaDTO;
-import co.edu.uniquindio.clinica.dto.admin.DetalleMedicoDTO;
-import co.edu.uniquindio.clinica.dto.admin.ItemCitaAdminDTO;
-import co.edu.uniquindio.clinica.dto.admin.ItemMedicoDTO;
-import co.edu.uniquindio.clinica.dto.admin.RegistroMedicoDTO;
+import co.edu.uniquindio.clinica.dto.admin.*;
+import co.edu.uniquindio.clinica.modelo.entidades.Medico;
 import co.edu.uniquindio.clinica.modelo.enums.EstadoPQRS;
 
 import java.util.List;
@@ -14,6 +12,7 @@ import java.util.List;
 public interface AdministradorServicio {
 
     int crearMedico(RegistroMedicoDTO medicoDTO) throws Exception;
+
 
     int actualizarMedico(DetalleMedicoDTO medicoDTO) throws Exception;
 

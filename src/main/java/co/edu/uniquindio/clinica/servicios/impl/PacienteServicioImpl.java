@@ -10,10 +10,10 @@ import co.edu.uniquindio.clinica.modelo.enums.EstadoUsuario;
 import co.edu.uniquindio.clinica.repositorios.*;
 import co.edu.uniquindio.clinica.servicios.interfaces.PacienteServicio;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import javax.management.StringValueExp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -78,14 +78,15 @@ public class PacienteServicioImpl implements PacienteServicio {
     @Override
     public int editarPerfil(DetallePacienteDTO PacienteDTO) throws Exception {
 
-        Optional<Paciente> pacienteBuscado = this.pacienteRepo.findById(PacienteDTO.codigo());
+        Optional<Paciente> pacienteBuscado = Optional.ofNullable(this.pacienteRepo.findByCedula(PacienteDTO.cedula()));
         if (pacienteBuscado.isEmpty()) {
-            throw new Exception("No existe un paciente con el codigo" + PacienteDTO.codigo());
+            throw new Exception("No existe un paciente con la cedula:/ " + PacienteDTO.cedula());
         } else {
             Paciente pacienteActualizado = pacienteBuscado.get();
             pacienteActualizado.setCedula(PacienteDTO.cedula());
             pacienteActualizado.setNombre(PacienteDTO.nombre());
             pacienteActualizado.setTelefono(PacienteDTO.telefono());
+            pacienteActualizado.setUrlFoto(PacienteDTO.urlFoto());
             pacienteActualizado.setCiudad(PacienteDTO.ciudad());
             pacienteActualizado.setEmail(PacienteDTO.correo());
             pacienteActualizado.setFechaNacimiento(PacienteDTO.fechaNacimiento());
@@ -99,11 +100,11 @@ public class PacienteServicioImpl implements PacienteServicio {
     }
 
     @Override
-    public void eliminarCuenta(int codigoPaciente) throws Exception {
+    public boolean eliminarCuenta(String cedulaPaciente) throws Exception {
 
-        Optional<Paciente> pacienteBuscado = this.pacienteRepo.findById(codigoPaciente);
+        Optional<Paciente> pacienteBuscado = Optional.ofNullable(this.pacienteRepo.findByCedula(cedulaPaciente));
         if (pacienteBuscado.isEmpty()) {
-            throw new Exception("No existe un paciente con el codigo " + codigoPaciente);
+            throw new Exception("No existe un paciente con la cedula " +cedulaPaciente);
         } else {
             Paciente obtenido = pacienteBuscado.get();
             obtenido.setEstado(EstadoUsuario.INACTIVO);
@@ -112,6 +113,7 @@ public class PacienteServicioImpl implements PacienteServicio {
         }
 
 
+        return true;
     }
 
     @Override
@@ -122,7 +124,13 @@ public class PacienteServicioImpl implements PacienteServicio {
             throw new Exception("No existe un paciente con el codigo " + codigo);
         } else {
             Paciente obtenido = buscado.get();
-            DetallePacienteDTO detallePacienteDTO = new DetallePacienteDTO(obtenido.getCodigo(), obtenido.getCedula(), obtenido.getNombre(), obtenido.getTelefono(), obtenido.getUrlFoto(), obtenido.getCiudad(), obtenido.getFechaNacimiento(), obtenido.getAlergias(), obtenido.getEmail(),obtenido.getEps() ,obtenido.getTipoSangre());
+            DetallePacienteDTO detallePacienteDTO = new DetallePacienteDTO(obtenido.getCodigo(),
+                    obtenido.getCedula(),
+                    obtenido.getNombre(), obtenido.getTelefono(),
+                    obtenido.getUrlFoto(), obtenido.getCiudad(),
+                    obtenido.getFechaNacimiento(), obtenido.getAlergias(),
+                    obtenido.getEmail(),obtenido.getEps() ,
+                    obtenido.getTipoSangre());
             return detallePacienteDTO;
         }
     }
