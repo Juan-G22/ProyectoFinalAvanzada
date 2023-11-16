@@ -15,15 +15,15 @@ INSERT INTO administrador values(1);
 INSERT INTO administrador  values(2);
 
 INSERT INTO paciente (cedula,ciudad,nombre,telefono,url_Foto,alergias,eps,fecha_Nacimiento,tipo_Sangre,codigo)
-VALUES (936547956,0,'Luisa Lopez Gil','3211548880', 'http://fotolaura.com/laura.jpg','Sin alergias',0,'1995-11-28',0,3);
+VALUES ('936547956',0,'Luisa Lopez Gil','3211548880', 'http://fotolaura.com/laura.jpg','Sin alergias',0,'1995-11-28',0,3);
 INSERT INTO paciente (cedula,ciudad,nombre,telefono,url_Foto,alergias,eps,fecha_Nacimiento,tipo_Sangre,codigo)
-VALUES (200963258, 2,'Pedro pablo Gonzalez Zapata', '3002453219','http://pablo.com/pabloz.jpg','alergia al polen',0,'1990-08-15',0,4);
+VALUES ('200963258', 2,'Pedro pablo Gonzalez Zapata', '3002453219','http://pablo.com/pabloz.jpg','alergia al polen',0,'1990-08-15',0,4);
 INSERT INTO paciente (cedula,ciudad,nombre,telefono,url_Foto,alergias,eps,fecha_Nacimiento,tipo_Sangre,codigo)
-VALUES(1009632582,3, 'Maria Perez Perez','6067429987','http://foto1.com/foto1.jpg','sin alergias conocidas',4,'1988-03-20',6,5);
+VALUES('1009632582',3, 'Maria Perez Perez','6067429987','http://foto1.com/foto1.jpg','sin alergias conocidas',4,'1988-03-20',6,5);
 INSERT INTO paciente (cedula,ciudad,nombre,telefono,url_Foto,alergias,eps,fecha_Nacimiento,tipo_Sangre,codigo)
-values( 338521427,3,'Carlos Rodriguez','6067433321','http://carlos.com/fotocarlos.jpg', 'alergia al ibuprofeno',1, '2000-05-10',7,6);
+values( '338521427',3,'Carlos Rodriguez','6067433321','http://carlos.com/fotocarlos.jpg', 'alergia al ibuprofeno',1, '2000-05-10',7,6);
 INSERT INTO paciente (cedula,ciudad,nombre,telefono,url_Foto,alergias,eps,fecha_Nacimiento,tipo_Sangre,codigo)
-values(44546821,3,'Laura Gonzalez Sanchez','6067654321','http://foto.com/fotolala.jpg','Sin alergias', 1,'1998-12-05',0,7);
+values('44546821',3,'Laura Gonzalez Sanchez','6067654321','http://foto.com/fotolala.jpg','Sin alergias', 1,'1998-12-05',0,7);
 
 insert into medico(cedula,ciudad,nombre,telefono,url_Foto,especialidad,codigo)
 values(100400569,2,'Dr. Juan Pérez Camacho','3211234567','http://doctorCamacho.com/doctorCamacho.jpg',0,8);
