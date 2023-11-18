@@ -57,12 +57,11 @@ public class PacienteServicioTest {
     @Test
     @Sql({"classpath:dataset.sql"})
     public void eliminarTest() throws Exception {
-<<<<<<< HEAD
-       boolean respuesta = this.pacienteServicio.eliminarCuenta("7");
-=======
+
+
 
        boolean respuesta = pacienteServicio.eliminarCuenta("338521427");
->>>>>>> a1fbc5df0bf041db5bb0b10581effb04e2914c06
+
         Assertions.assertTrue(respuesta);
 
     }

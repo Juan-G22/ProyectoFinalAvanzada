@@ -1,12 +1,14 @@
 package co.edu.uniquindio.clinica.servicios.impl;
 
 import co.edu.uniquindio.clinica.dto.DetalleAtencionMedicaDTO;
+import co.edu.uniquindio.clinica.dto.ItemPQRSDTO;
 import co.edu.uniquindio.clinica.dto.admin.ItemCitaAdminDTO;
 import co.edu.uniquindio.clinica.dto.medico.DiaLibreDTO;
 import co.edu.uniquindio.clinica.dto.medico.RegistroAtencionDTO;
 import co.edu.uniquindio.clinica.modelo.entidades.Atencion;
 import co.edu.uniquindio.clinica.modelo.entidades.Cita;
 import co.edu.uniquindio.clinica.modelo.entidades.Medico;
+import co.edu.uniquindio.clinica.modelo.entidades.PQRS;
 import co.edu.uniquindio.clinica.modelo.enums.EstadoCita;
 import co.edu.uniquindio.clinica.repositorios.AtencionRepo;
 import co.edu.uniquindio.clinica.repositorios.CitaRepo;
@@ -16,6 +18,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,30 +35,34 @@ public class MedicoServicioImpl implements MedicoServicio {
     public List<ItemCitaAdminDTO> listarCitasPendientes(int codigoMedico) throws Exception {
 
         List<Cita> citasPendientes = citaRepo.findByMedicoCodigo(codigoMedico);
-        List<ItemCitaAdminDTO> respuesta = new ArrayList<>();
+
 
         if (citasPendientes.isEmpty()) {
             throw new Exception("No hay citas pendientes para el médico" + codigoMedico);
         }
 
+    List<ItemCitaAdminDTO> respuesta = new ArrayList<>();
 
-        for (Cita c : citasPendientes) {
-            respuesta.add(new ItemCitaAdminDTO(
-                    c.getCodigo(),
-                    c.getPaciente().getCedula(),
-                    c.getPaciente().getNombre(),
-                    c.getMedico().getNombre(),
-                    c.getMedico().getEspecialidad(),
-                    c.getEstadoCita(),
-                    c.getFechaCita()
 
-            ));
-        }
+            Iterator var4 = citasPendientes.iterator();
+
+            while (var4.hasNext()) {
+                Cita p = (Cita) var4.next();
+                respuesta.add(new ItemCitaAdminDTO(p.getCodigo(),
+                        p.getPaciente().getCedula(),
+                        p.getPaciente().getNombre(),
+                        p.getMedico().getNombre(),
+                       p.getMedico().getEspecialidad(),
+                       p.getEstadoCita(),
+                       p.getFechaCita()));
+
+            }
+
 
         return respuesta;
+}
 
 
-    }
 
 
     @Override
@@ -88,6 +95,10 @@ public class MedicoServicioImpl implements MedicoServicio {
     public List<ItemCitaAdminDTO> listarHistorialAtencionesPaciente(int codigoPaciente) throws Exception {
 
         List<Cita> listaCitas = citaRepo.findByPacienteCodigo(codigoPaciente);
+
+    if (listaCitas.isEmpty()) {
+        throw new Exception("No tiene citas pendientes");
+    }
         List<ItemCitaAdminDTO> respuesta = new ArrayList<>();
 
         for (Cita c : listaCitas) {

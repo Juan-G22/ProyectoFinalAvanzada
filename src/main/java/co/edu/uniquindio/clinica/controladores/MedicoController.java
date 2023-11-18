@@ -23,7 +23,7 @@ public class MedicoController {
     private final MedicoServicio medicoServicio;
 
     @GetMapping("/listar-citas-pendientes/{codigoMedico}")
-    public ResponseEntity<MensajeDTO<List<ItemCitaAdminDTO>>> listarCitasPendientes(int codigoMedico) throws Exception{
+    public ResponseEntity<MensajeDTO<List<ItemCitaAdminDTO>>> listarCitasPendientes(@PathVariable int codigoMedico) throws Exception{
         return ResponseEntity.ok().body( new MensajeDTO<>(false,medicoServicio.listarCitasPendientes(codigoMedico)));
     }
 
@@ -37,7 +37,7 @@ public class MedicoController {
 
 
 
-    @GetMapping("/listar-historial-atenciones-paciente/{codigoPciente}")
+    @GetMapping("/listar-historial-atenciones-paciente/{codigoPaciente}")
     public ResponseEntity<MensajeDTO< List<ItemCitaAdminDTO>>> listarHistorialAtencionesPaciente(@PathVariable int codigoPaciente) throws Exception{
         return ResponseEntity.ok().body( new MensajeDTO<>(false, medicoServicio.listarHistorialAtencionesPaciente(codigoPaciente)));
     }
